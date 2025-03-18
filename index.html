@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Trips</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__inner">
+                <div class="navBar">
+                    <a href="/" class="navBar__title navBar__title-active">Поездки</a>
+                </div>
+                <a href="/" class="user">
+                    <p class="user__title">Заболоцкий К.О</p>
+                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.50816 6.99326C8.50779 6.95053 8.52384 6.90933 8.55293 6.87813L9.41085 6.02022L10.2644 5.16667H9.05729H3.99996C3.95576 5.16667 3.91336 5.14911 3.88211 5.11785C3.85085 5.0866 3.83329 5.0442 3.83329 5C3.83329 4.9558 3.85085 4.91341 3.88211 4.88215C3.91336 4.85089 3.95576 4.83333 3.99996 4.83333H9.05729H10.2644L9.41085 3.97978L8.54885 3.11778L8.5489 3.11773L8.54265 3.11169C8.52673 3.09631 8.51403 3.07792 8.5053 3.05759C8.49656 3.03726 8.49196 3.01539 8.49177 2.99326C8.49158 2.97113 8.4958 2.94918 8.50418 2.9287C8.51256 2.90821 8.52493 2.88961 8.54058 2.87396C8.55623 2.85831 8.57484 2.84593 8.59532 2.83755C8.6158 2.82917 8.63775 2.82496 8.65988 2.82515C8.68201 2.82534 8.70388 2.82994 8.72422 2.83867C8.74455 2.84741 8.76294 2.8601 8.77831 2.87602L8.77826 2.87608L8.78441 2.88222L10.7844 4.88217C10.7844 4.88219 10.7844 4.8822 10.7844 4.88222C10.8156 4.91347 10.8331 4.95583 10.8331 5C10.8331 5.04417 10.8156 5.08653 10.7844 5.11778C10.7844 5.1178 10.7844 5.11782 10.7844 5.11783L8.78851 7.11368C8.75731 7.14278 8.71611 7.15884 8.67337 7.15847C8.62967 7.15809 8.58787 7.14056 8.55697 7.10966C8.52607 7.07876 8.50854 7.03696 8.50816 6.99326ZM1.21544 0.882149C1.2467 0.850893 1.28909 0.833334 1.33329 0.833334C1.3775 0.833334 1.41989 0.850893 1.45114 0.882149C1.4824 0.913405 1.49996 0.955798 1.49996 1V9C1.49996 9.0442 1.4824 9.0866 1.45114 9.11785C1.41989 9.14911 1.3775 9.16667 1.33329 9.16667C1.28909 9.16667 1.2467 9.14911 1.21544 9.11785C1.18419 9.0866 1.16663 9.0442 1.16663 9V1C1.16663 0.955798 1.18419 0.913405 1.21544 0.882149Z"
+                            fill="#252C32" stroke="#0E73F6" />
+                    </svg>
+                </a>
+            </div>
+        </header>
+        <main class="main">
+            <section class="menuBar">
+                <div class="menuBar_header">
+                    <div class="menuBar_header__inner">
+                        <h1 class="menuBar_header__title">Мои поездки</h1>
+                        <button class="menuBar_header__button">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5 0C5.26522 0 5.51957 0.105357 5.70711 0.292893C5.89464 0.48043 6 0.734784 6 1V4H9C9.26522 4 9.51957 4.10536 9.70711 4.29289C9.89464 4.48043 10 4.73478 10 5C10 5.26522 9.89464 5.51957 9.70711 5.70711C9.51957 5.89464 9.26522 6 9 6H6V9C6 9.26522 5.89464 9.51957 5.70711 9.70711C5.51957 9.89464 5.26522 10 5 10C4.73478 10 4.48043 9.89464 4.29289 9.70711C4.10536 9.51957 4 9.26522 4 9V6H1C0.734784 6 0.48043 5.89464 0.292893 5.70711C0.105357 5.51957 0 5.26522 0 5C0 4.73478 0.105357 4.48043 0.292893 4.29289C0.48043 4.10536 0.734784 4 1 4H4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0Z"
+                                    fill="white" />
+                            </svg>
+                            <p>Оформить поездку</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="menuBar_body">
+                    <div class="filter">
+                        <div class="filter_data">
+                            <div class="filter_data__inner">
+                                <label class="filter_data__title">Период с:</label>
+                                <input type="date" name="to" id="1" class="filter_data__input">
+                            </div>
+                            <div class="filter_data__inner">
+                                <label class="filter_data__title">по:</label>
+                                <input type="date" name="do" id="2" class="filter_data__input">
+                            </div>
+                        </div>
+                        <div class="search">
+                            <input type="text" placeholder="Поиск..." class="search__input">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M10 6.00077C8.93913 6.00077 7.92172 6.42219 7.17157 7.17234C6.42143 7.92248 6 8.9399 6 10.0008C6 11.0616 6.42143 12.079 7.17157 12.8292C7.92172 13.5793 8.93913 14.0008 10 14.0008C11.0609 14.0008 12.0783 13.5793 12.8284 12.8292C13.5786 12.079 14 11.0616 14 10.0008C14 8.9399 13.5786 7.92248 12.8284 7.17234C12.0783 6.42219 11.0609 6.00077 10 6.00077ZM4 10.0008C3.99988 9.05647 4.22264 8.12548 4.65017 7.28351C5.0777 6.44154 5.69792 5.71236 6.4604 5.15529C7.22287 4.59822 8.10606 4.22898 9.03815 4.0776C9.97023 3.92622 10.9249 3.99698 11.8245 4.28412C12.724 4.57126 13.5432 5.06667 14.2152 5.73006C14.8872 6.39346 15.3931 7.2061 15.6919 8.1019C15.9906 8.9977 16.0737 9.95136 15.9343 10.8853C15.795 11.8193 15.4372 12.7072 14.89 13.4768L19.707 18.2938C19.8892 18.4824 19.99 18.735 19.9877 18.9972C19.9854 19.2594 19.8802 19.5102 19.6948 19.6956C19.5094 19.881 19.2586 19.9862 18.9964 19.9884C18.7342 19.9907 18.4816 19.8899 18.293 19.7078L13.477 14.8918C12.5794 15.53 11.5233 15.9089 10.4247 15.9869C9.326 16.0648 8.22707 15.8389 7.2483 15.3337C6.26953 14.8286 5.44869 14.0638 4.87572 13.1231C4.30276 12.1824 3.99979 11.1022 4 10.0008Z"
+                                    fill="#B0BABF" />
+                            </svg>
+                        </div>
+                        <button class="clear">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8.00003 9.414L4.70703 12.707L3.29303 11.293L6.58603 8L3.29303 4.707L4.70703 3.293L8.00003 6.586L11.293 3.293L12.707 4.707L9.41403 8L12.707 11.293L11.293 12.707L8.00003 9.414Z"
+                                    fill="#4094F7" />
+                            </svg>
+                            <p>Сбросить все</p>
+                        </button>
+                    </div>
+                    <div class="filter_checkbox">
+                        <input type="checkbox" name="Показать архивные поездки" class="filter_checkbox__input">
+                        <label>Показать архивные поездки</label>
+                    </div>
+                </div>
+            </section>
+            <svg width="100dvw" height="2" viewBox="0 0 1440 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1440" height="2" rx="1" fill="#D7EDFF" />
+                <path d="M0 1C0 0.447715 0.447715 0 1 0H360V2H0.999992C0.447707 2 0 1.55228 0 1Z" fill="#4094F7" />
+            </svg>
+            <section class="card_list">
+                <div class="card_item">
+                    <div class="card_info">
+                        <div class="card_info__item">
+                            <p class="card_info__title">№ поездки</p>
+                            <a href="/" class="card_info__id">000115</a>
+                        </div>
+                        <div class="card_info__item">
+                            <p class="card_info__title card_info__item-date">Дата поездки</p>
+                            <p>22.02.2024 - 27.02.2024</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-plan">
+                            <p class="card_info__title">Сумма, план</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-fact">
+                            <p class="card_info__title">Сумма, факт</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-cite">
+                            <p class="card_info__title">Город</p>
+                            <div class="card_info__cite">
+                                <p class="card_info__cite_text">Москва, Ярославль, Ижевск, Владимир</p>
+
+                                <div class="tooltip">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM9 4C9 4.26522 8.89464 4.51957 8.70711 4.70711C8.51957 4.89464 8.26522 5 8 5C7.73478 5 7.48043 4.89464 7.29289 4.70711C7.10536 4.51957 7 4.26522 7 4C7 3.73478 7.10536 3.48043 7.29289 3.29289C7.48043 3.10536 7.73478 3 8 3C8.26522 3 8.51957 3.10536 8.70711 3.29289C8.89464 3.48043 9 3.73478 9 4ZM7 7C6.73478 7 6.48043 7.10536 6.29289 7.29289C6.10536 7.48043 6 7.73478 6 8C6 8.26522 6.10536 8.51957 6.29289 8.70711C6.48043 8.89464 6.73478 9 7 9V12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H9C9.26522 13 9.51957 12.8946 9.70711 12.7071C9.89464 12.5196 10 12.2652 10 12C10 11.7348 9.89464 11.4804 9.70711 11.2929C9.51957 11.1054 9.26522 11 9 11V8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7H7Z"
+                                            fill="#84919A" />
+                                    </svg>
+                                    <span class="tooltiptext">
+                                        Москва, Ярославль, Ижевск, Владимир
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info__item card_button_block">
+                        <p class="card_info__title card_info__title_button">Статус</p>
+                        <button class="card_button_block__button">Документы</button>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_info">
+                        <div class="card_info__item">
+                            <p class="card_info__title">№ поездки</p>
+                            <a href="/" class="card_info__id">000117</a>
+                        </div>
+                        <div class="card_info__item">
+                            <p class="card_info__title card_info__item-date">Дата поездки</p>
+                            <p>22.02.2024 - 27.02.2024</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-plan">
+                            <p class="card_info__title">Сумма, план</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-fact">
+                            <p class="card_info__title">Сумма, факт</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-cite">
+                            <p class="card_info__title">Город</p>
+                            <div class="card_info__cite">
+                                <p class="card_info__cite_text">Москва</p>
+
+                                <div class="tooltip">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM9 4C9 4.26522 8.89464 4.51957 8.70711 4.70711C8.51957 4.89464 8.26522 5 8 5C7.73478 5 7.48043 4.89464 7.29289 4.70711C7.10536 4.51957 7 4.26522 7 4C7 3.73478 7.10536 3.48043 7.29289 3.29289C7.48043 3.10536 7.73478 3 8 3C8.26522 3 8.51957 3.10536 8.70711 3.29289C8.89464 3.48043 9 3.73478 9 4ZM7 7C6.73478 7 6.48043 7.10536 6.29289 7.29289C6.10536 7.48043 6 7.73478 6 8C6 8.26522 6.10536 8.51957 6.29289 8.70711C6.48043 8.89464 6.73478 9 7 9V12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H9C9.26522 13 9.51957 12.8946 9.70711 12.7071C9.89464 12.5196 10 12.2652 10 12C10 11.7348 9.89464 11.4804 9.70711 11.2929C9.51957 11.1054 9.26522 11 9 11V8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7H7Z"
+                                            fill="#84919A" />
+                                    </svg>
+                                    <span class="tooltiptext">
+                                        Москва, Ярославль, Ижевск, Владимир
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info__item card_button_block">
+                        <p class="card_info__title card_info__title_button">Статус</p>
+                        <button class="card_button_block__button">Документы</button>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_info">
+                        <div class="card_info__item">
+                            <p class="card_info__title">№ поездки</p>
+                            <a href="/" class="card_info__id">000074</a>
+                        </div>
+                        <div class="card_info__item">
+                            <p class="card_info__title card_info__item-date">Дата поездки</p>
+                            <p>22.02.2024 - 27.02.2024</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-plan">
+                            <p class="card_info__title">Сумма, план</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-fact">
+                            <p class="card_info__title">Сумма, факт</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-cite">
+                            <p class="card_info__title">Город</p>
+                            <div class="card_info__cite">
+                                <p class="card_info__cite_text">Кременчуг-Константиновское, Петропавловск-Камчатский,
+                                    Новосибирск, Волгоград</p>
+
+                                <div class="tooltip tooltip-active">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM9 4C9 4.26522 8.89464 4.51957 8.70711 4.70711C8.51957 4.89464 8.26522 5 8 5C7.73478 5 7.48043 4.89464 7.29289 4.70711C7.10536 4.51957 7 4.26522 7 4C7 3.73478 7.10536 3.48043 7.29289 3.29289C7.48043 3.10536 7.73478 3 8 3C8.26522 3 8.51957 3.10536 8.70711 3.29289C8.89464 3.48043 9 3.73478 9 4ZM7 7C6.73478 7 6.48043 7.10536 6.29289 7.29289C6.10536 7.48043 6 7.73478 6 8C6 8.26522 6.10536 8.51957 6.29289 8.70711C6.48043 8.89464 6.73478 9 7 9V12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H9C9.26522 13 9.51957 12.8946 9.70711 12.7071C9.89464 12.5196 10 12.2652 10 12C10 11.7348 9.89464 11.4804 9.70711 11.2929C9.51957 11.1054 9.26522 11 9 11V8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7H7Z"
+                                            fill="#84919A" />
+                                    </svg>
+                                    <span class="tooltiptext">
+                                        Кременчуг-Константиновское,
+                                        Петропавловск-Камчатский,
+                                        Новосибирск, Волгоград, Саратов
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info__item card_button_block">
+                        <p class="card_info__title card_info__title_button">Статус</p>
+                        <button class="card_button_block__button">Документы</button>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_info">
+                        <div class="card_info__item">
+                            <p class="card_info__title">№ поездки</p>
+                            <a href="/" class="card_info__id">000115</a>
+                        </div>
+                        <div class="card_info__item">
+                            <p class="card_info__title card_info__item-date">Дата поездки</p>
+                            <p>22.02.2024 - 27.02.2024</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-plan">
+                            <p class="card_info__title">Сумма, план</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-fact">
+                            <p class="card_info__title">Сумма, факт</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-cite">
+                            <p class="card_info__title">Город</p>
+                            <div class="card_info__cite">
+                                <p class="card_info__cite_text">Москва, Ярославль, Ижевск, Владимир</p>
+
+                                <div class="tooltip">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM9 4C9 4.26522 8.89464 4.51957 8.70711 4.70711C8.51957 4.89464 8.26522 5 8 5C7.73478 5 7.48043 4.89464 7.29289 4.70711C7.10536 4.51957 7 4.26522 7 4C7 3.73478 7.10536 3.48043 7.29289 3.29289C7.48043 3.10536 7.73478 3 8 3C8.26522 3 8.51957 3.10536 8.70711 3.29289C8.89464 3.48043 9 3.73478 9 4ZM7 7C6.73478 7 6.48043 7.10536 6.29289 7.29289C6.10536 7.48043 6 7.73478 6 8C6 8.26522 6.10536 8.51957 6.29289 8.70711C6.48043 8.89464 6.73478 9 7 9V12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H9C9.26522 13 9.51957 12.8946 9.70711 12.7071C9.89464 12.5196 10 12.2652 10 12C10 11.7348 9.89464 11.4804 9.70711 11.2929C9.51957 11.1054 9.26522 11 9 11V8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7H7Z"
+                                            fill="#84919A" />
+                                    </svg>
+                                    <span class="tooltiptext">
+                                        Москва, Ярославль, Ижевск, Владимир
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info__item card_button_block">
+                        <p class="card_info__title card_info__title_button">Статус</p>
+                        <button class="card_button_block__button">Документы</button>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_info">
+                        <div class="card_info__item">
+                            <p class="card_info__title">№ поездки</p>
+                            <a href="/" class="card_info__id">000117</a>
+                        </div>
+                        <div class="card_info__item">
+                            <p class="card_info__title card_info__item-date">Дата поездки</p>
+                            <p>22.02.2024 - 27.02.2024</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-plan">
+                            <p class="card_info__title">Сумма, план</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-fact">
+                            <p class="card_info__title">Сумма, факт</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-cite">
+                            <p class="card_info__title">Город</p>
+                            <div class="card_info__cite">
+                                <p class="card_info__cite_text">Москва</p>
+
+                                <div class="tooltip">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM9 4C9 4.26522 8.89464 4.51957 8.70711 4.70711C8.51957 4.89464 8.26522 5 8 5C7.73478 5 7.48043 4.89464 7.29289 4.70711C7.10536 4.51957 7 4.26522 7 4C7 3.73478 7.10536 3.48043 7.29289 3.29289C7.48043 3.10536 7.73478 3 8 3C8.26522 3 8.51957 3.10536 8.70711 3.29289C8.89464 3.48043 9 3.73478 9 4ZM7 7C6.73478 7 6.48043 7.10536 6.29289 7.29289C6.10536 7.48043 6 7.73478 6 8C6 8.26522 6.10536 8.51957 6.29289 8.70711C6.48043 8.89464 6.73478 9 7 9V12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H9C9.26522 13 9.51957 12.8946 9.70711 12.7071C9.89464 12.5196 10 12.2652 10 12C10 11.7348 9.89464 11.4804 9.70711 11.2929C9.51957 11.1054 9.26522 11 9 11V8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7H7Z"
+                                            fill="#84919A" />
+                                    </svg>
+                                    <span class="tooltiptext">
+                                        Москва, Ярославль, Ижевск, Владимир
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info__item card_button_block">
+                        <p class="card_info__title card_info__title_button">Статус</p>
+                        <button class="card_button_block__button">Документы</button>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_info">
+                        <div class="card_info__item">
+                            <p class="card_info__title">№ поездки</p>
+                            <a href="/" class="card_info__id">000115</a>
+                        </div>
+                        <div class="card_info__item">
+                            <p class="card_info__title card_info__item-date">Дата поездки</p>
+                            <p>22.02.2024 - 27.02.2024</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-plan">
+                            <p class="card_info__title">Сумма, план</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-fact">
+                            <p class="card_info__title">Сумма, факт</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-cite">
+                            <p class="card_info__title">Город</p>
+                            <div class="card_info__cite">
+                                <p class="card_info__cite_text">Москва, Ярославль, Ижевск, Владимир</p>
+
+                                <div class="tooltip">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM9 4C9 4.26522 8.89464 4.51957 8.70711 4.70711C8.51957 4.89464 8.26522 5 8 5C7.73478 5 7.48043 4.89464 7.29289 4.70711C7.10536 4.51957 7 4.26522 7 4C7 3.73478 7.10536 3.48043 7.29289 3.29289C7.48043 3.10536 7.73478 3 8 3C8.26522 3 8.51957 3.10536 8.70711 3.29289C8.89464 3.48043 9 3.73478 9 4ZM7 7C6.73478 7 6.48043 7.10536 6.29289 7.29289C6.10536 7.48043 6 7.73478 6 8C6 8.26522 6.10536 8.51957 6.29289 8.70711C6.48043 8.89464 6.73478 9 7 9V12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H9C9.26522 13 9.51957 12.8946 9.70711 12.7071C9.89464 12.5196 10 12.2652 10 12C10 11.7348 9.89464 11.4804 9.70711 11.2929C9.51957 11.1054 9.26522 11 9 11V8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7H7Z"
+                                            fill="#84919A" />
+                                    </svg>
+                                    <span class="tooltiptext">
+                                        Москва, Ярославль, Ижевск, Владимир
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info__item card_button_block">
+                        <p class="card_info__title card_info__title_button">Статус</p>
+                        <button class="card_button_block__button">Документы</button>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_info">
+                        <div class="card_info__item">
+                            <p class="card_info__title">№ поездки</p>
+                            <a href="/" class="card_info__id">000117</a>
+                        </div>
+                        <div class="card_info__item">
+                            <p class="card_info__title card_info__item-date">Дата поездки</p>
+                            <p>22.02.2024 - 27.02.2024</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-plan">
+                            <p class="card_info__title">Сумма, план</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-fact">
+                            <p class="card_info__title">Сумма, факт</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-cite">
+                            <p class="card_info__title">Город</p>
+                            <div class="card_info__cite">
+                                <p class="card_info__cite_text">Москва</p>
+
+                                <div class="tooltip">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM9 4C9 4.26522 8.89464 4.51957 8.70711 4.70711C8.51957 4.89464 8.26522 5 8 5C7.73478 5 7.48043 4.89464 7.29289 4.70711C7.10536 4.51957 7 4.26522 7 4C7 3.73478 7.10536 3.48043 7.29289 3.29289C7.48043 3.10536 7.73478 3 8 3C8.26522 3 8.51957 3.10536 8.70711 3.29289C8.89464 3.48043 9 3.73478 9 4ZM7 7C6.73478 7 6.48043 7.10536 6.29289 7.29289C6.10536 7.48043 6 7.73478 6 8C6 8.26522 6.10536 8.51957 6.29289 8.70711C6.48043 8.89464 6.73478 9 7 9V12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H9C9.26522 13 9.51957 12.8946 9.70711 12.7071C9.89464 12.5196 10 12.2652 10 12C10 11.7348 9.89464 11.4804 9.70711 11.2929C9.51957 11.1054 9.26522 11 9 11V8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7H7Z"
+                                            fill="#84919A" />
+                                    </svg>
+                                    <span class="tooltiptext">
+                                        Москва, Ярославль, Ижевск, Владимир
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info__item card_button_block">
+                        <p class="card_info__title card_info__title_button">Статус</p>
+                        <button class="card_button_block__button">Документы</button>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_info">
+                        <div class="card_info__item">
+                            <p class="card_info__title">№ поездки</p>
+                            <a href="/" class="card_info__id">000117</a>
+                        </div>
+                        <div class="card_info__item">
+                            <p class="card_info__title card_info__item-date">Дата поездки</p>
+                            <p>22.02.2024 - 27.02.2024</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-plan">
+                            <p class="card_info__title">Сумма, план</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-fact">
+                            <p class="card_info__title">Сумма, факт</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-cite">
+                            <p class="card_info__title">Город</p>
+                            <div class="card_info__cite">
+                                <p class="card_info__cite_text">Москва</p>
+
+                                <div class="tooltip">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM9 4C9 4.26522 8.89464 4.51957 8.70711 4.70711C8.51957 4.89464 8.26522 5 8 5C7.73478 5 7.48043 4.89464 7.29289 4.70711C7.10536 4.51957 7 4.26522 7 4C7 3.73478 7.10536 3.48043 7.29289 3.29289C7.48043 3.10536 7.73478 3 8 3C8.26522 3 8.51957 3.10536 8.70711 3.29289C8.89464 3.48043 9 3.73478 9 4ZM7 7C6.73478 7 6.48043 7.10536 6.29289 7.29289C6.10536 7.48043 6 7.73478 6 8C6 8.26522 6.10536 8.51957 6.29289 8.70711C6.48043 8.89464 6.73478 9 7 9V12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H9C9.26522 13 9.51957 12.8946 9.70711 12.7071C9.89464 12.5196 10 12.2652 10 12C10 11.7348 9.89464 11.4804 9.70711 11.2929C9.51957 11.1054 9.26522 11 9 11V8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7H7Z"
+                                            fill="#84919A" />
+                                    </svg>
+                                    <span class="tooltiptext">
+                                        Москва, Ярославль, Ижевск, Владимир
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info__item card_button_block">
+                        <p class="card_info__title card_info__title_button">Статус</p>
+                        <button class="card_button_block__button">Документы</button>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_info">
+                        <div class="card_info__item">
+                            <p class="card_info__title">№ поездки</p>
+                            <a href="/" class="card_info__id">000115</a>
+                        </div>
+                        <div class="card_info__item">
+                            <p class="card_info__title card_info__item-date">Дата поездки</p>
+                            <p>22.02.2024 - 27.02.2024</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-plan">
+                            <p class="card_info__title">Сумма, план</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-fact">
+                            <p class="card_info__title">Сумма, факт</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-cite">
+                            <p class="card_info__title">Город</p>
+                            <div class="card_info__cite">
+                                <p class="card_info__cite_text">Москва, Ярославль, Ижевск, Владимир</p>
+
+                                <div class="tooltip">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM9 4C9 4.26522 8.89464 4.51957 8.70711 4.70711C8.51957 4.89464 8.26522 5 8 5C7.73478 5 7.48043 4.89464 7.29289 4.70711C7.10536 4.51957 7 4.26522 7 4C7 3.73478 7.10536 3.48043 7.29289 3.29289C7.48043 3.10536 7.73478 3 8 3C8.26522 3 8.51957 3.10536 8.70711 3.29289C8.89464 3.48043 9 3.73478 9 4ZM7 7C6.73478 7 6.48043 7.10536 6.29289 7.29289C6.10536 7.48043 6 7.73478 6 8C6 8.26522 6.10536 8.51957 6.29289 8.70711C6.48043 8.89464 6.73478 9 7 9V12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H9C9.26522 13 9.51957 12.8946 9.70711 12.7071C9.89464 12.5196 10 12.2652 10 12C10 11.7348 9.89464 11.4804 9.70711 11.2929C9.51957 11.1054 9.26522 11 9 11V8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7H7Z"
+                                            fill="#84919A" />
+                                    </svg>
+                                    <span class="tooltiptext">
+                                        Москва, Ярославль, Ижевск, Владимир
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info__item card_button_block">
+                        <p class="card_info__title card_info__title_button">Статус</p>
+                        <button class="card_button_block__button">Документы</button>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_info">
+                        <div class="card_info__item">
+                            <p class="card_info__title">№ поездки</p>
+                            <a href="/" class="card_info__id">000117</a>
+                        </div>
+                        <div class="card_info__item">
+                            <p class="card_info__title card_info__item-date">Дата поездки</p>
+                            <p>22.02.2024 - 27.02.2024</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-plan">
+                            <p class="card_info__title">Сумма, план</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-sum card_info__item-fact">
+                            <p class="card_info__title">Сумма, факт</p>
+                            <p>29 400,00</p>
+                        </div>
+                        <div class="card_info__item card_info__item-cite">
+                            <p class="card_info__title">Город</p>
+                            <div class="card_info__cite">
+                                <p class="card_info__cite_text">Москва</p>
+
+                                <div class="tooltip">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M16 8C16 10.1217 15.1571 12.1566 13.6569 13.6569C12.1566 15.1571 10.1217 16 8 16C5.87827 16 3.84344 15.1571 2.34315 13.6569C0.842855 12.1566 0 10.1217 0 8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0C10.1217 0 12.1566 0.842855 13.6569 2.34315C15.1571 3.84344 16 5.87827 16 8ZM9 4C9 4.26522 8.89464 4.51957 8.70711 4.70711C8.51957 4.89464 8.26522 5 8 5C7.73478 5 7.48043 4.89464 7.29289 4.70711C7.10536 4.51957 7 4.26522 7 4C7 3.73478 7.10536 3.48043 7.29289 3.29289C7.48043 3.10536 7.73478 3 8 3C8.26522 3 8.51957 3.10536 8.70711 3.29289C8.89464 3.48043 9 3.73478 9 4ZM7 7C6.73478 7 6.48043 7.10536 6.29289 7.29289C6.10536 7.48043 6 7.73478 6 8C6 8.26522 6.10536 8.51957 6.29289 8.70711C6.48043 8.89464 6.73478 9 7 9V12C7 12.2652 7.10536 12.5196 7.29289 12.7071C7.48043 12.8946 7.73478 13 8 13H9C9.26522 13 9.51957 12.8946 9.70711 12.7071C9.89464 12.5196 10 12.2652 10 12C10 11.7348 9.89464 11.4804 9.70711 11.2929C9.51957 11.1054 9.26522 11 9 11V8C9 7.73478 8.89464 7.48043 8.70711 7.29289C8.51957 7.10536 8.26522 7 8 7H7Z"
+                                            fill="#84919A" />
+                                    </svg>
+                                    <span class="tooltiptext">
+                                        Москва, Ярославль, Ижевск, Владимир
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_info__item card_button_block">
+                        <p class="card_info__title card_info__title_button">Статус</p>
+                        <button class="card_button_block__button">Документы</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
