@@ -230,6 +230,11 @@
     margin-bottom: 8px;
 }
 
+.card_item:hover {
+    border: 1px solid #9bcffd;
+    padding: 15px 15px 15px 23px;
+}
+
 .card_info {
     display: flex;
     gap: 28px;
@@ -320,7 +325,7 @@
     display: none;
 }
 
-.tooltip-active{
+.tooltip-active {
     display: block;
 }
 
